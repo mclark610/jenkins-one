@@ -5,6 +5,7 @@ pipeline {
             steps {
 	        sh 'echo "Starting npm version"'
                 sh 'npm --version'
+		ls -lrta
             }
         }
     }
