@@ -1,19 +1,9 @@
 pipeline {
-    agent {
-         docker {
-	     image 'node:11.15.0-alpine'
-	     args '-p3001:3000'
-	 }
-    }
-    
-
+    agent { docker { image 'python:3.5.1' } }
     stages {
         stage('build') {
             steps {
-	        sh 'echo "Starting npm version"'
-		sh 'echo "Adding another line"'
-		sh 'npm --version'
-		sh 'ls -lrta'
+                sh 'python --version'
             }
         }
     }
