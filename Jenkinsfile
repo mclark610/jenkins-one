@@ -1,10 +1,9 @@
 pipeline {
-    agent { docker { image 'python:3.5.1' } }
+    agent any
     stages {
         stage('build') {
             steps {
-	        sh 'echo "starting python"'
-                sh 'python --version'
+	        sh 'echo "starting something"'
 		sh '''
 		  echo "This is a multiline shell in "
 		  echo "the file."
