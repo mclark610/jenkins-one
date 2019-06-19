@@ -14,13 +14,13 @@ pipeline {
     }
     post {
         always {
-	    echo 'This will always run'
+	    sh 'echo "This will always run"'
 	}
 	success {
-	    echo 'This will only run if successful'
+	    sh 'echo "This will only run if successful"'
 	}
 	failure {
-	    echo 'This will run only if failed'
+	    sh 'echo "This will run only if failed"'
 	}
 	unstable {
 	    echo 'This will run only if the run was marked as unstable'
