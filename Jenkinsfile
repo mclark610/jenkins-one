@@ -3,7 +3,13 @@ pipeline {
     stages {
         stage('build') {
             steps {
+	        sh 'echo "starting python"'
                 sh 'python --version'
+		sh '''
+		  echo "This is a multiline shell in "
+		  echo "the file."
+		  echo "ls -lah"
+		'''
             }
         }
     }
